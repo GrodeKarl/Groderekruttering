@@ -66,7 +66,6 @@
                 padding-bottom: 10rem;
             }
         }
-        /* Skjul scrollbar for en renere estetikk mens siden laster */
         .loading-hide { opacity: 0; }
     </style>
 <script type="importmap">
@@ -84,6 +83,7 @@
 </head>
 <body class="loading-hide transition-opacity duration-1000" onload="document.body.classList.remove('loading-hide')">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- Endret fra /index.tsx til ./index.tsx for bedre kompatibilitet med bygg-verktøy -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
