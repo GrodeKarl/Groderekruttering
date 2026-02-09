@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grøde Rekruttering | Vekstpartner for mennesker og forretninger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'grode-dark-green': '#285F4E',
+                        'grode-earth': '#7A5E47',
+                        'grode-deep-earth': '#4A3B2A',
+                        'grode-olive': '#7C9D5B',
+                        'grode-cream': '#E8DCC7',
+                        'grode-stone': '#B6B8B5',
+                        'grode-midnight': '#1D2E38',
+                        'grode-gold': '#C2A878',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'slow-zoom': 'slowZoom 30s ease-in-out infinite alternate',
+                        'fade-in': 'fadeIn 1.2s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        slowZoom: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.1)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #E8DCC7;
+            color: #1D2E38;
+            scroll-behavior: smooth;
+        }
+        .section-padding {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        @media (min-width: 1024px) {
+            .section-padding {
+                padding-top: 10rem;
+                padding-bottom: 10rem;
+            }
+        }
+        /* Skjul scrollbar for en renere estetikk mens siden laster */
+        .loading-hide { opacity: 0; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "url": "https://esm.sh/url@^0.11.4",
+    "path": "https://esm.sh/path@^0.12.7"
+  }
+}
+</script>
+</head>
+<body class="loading-hide transition-opacity duration-1000" onload="document.body.classList.remove('loading-hide')">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
